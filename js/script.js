@@ -1,10 +1,9 @@
 function addClickListener() {
     const btn = $('#btn');
-    for (let i=0; i<10; i++){
-        btn.click(generateEmail);   
-    }
+    btn.click(generateEmail);
 }
 function generateEmail() {
+    for (let i=0; i<10; i++){
     $.ajax({
         url: 'https://flynn.boolean.careers/exercises/api/random/mail',
         method: 'GET',
@@ -19,7 +18,7 @@ function generateEmail() {
         error: function() {
             console.log('error');
         }
-    });
+    }); }
 }
 
 function init() {
